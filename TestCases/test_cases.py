@@ -12,12 +12,12 @@ class Test_Cases(unittest.TestCase):
         self.BankApp = BankApp(Customer(0, "", "", "", "", "", ""))
 
     def test_create_customer(self):
-        temp_cust = self.customer.create_customer(Customer(0, first_name="someone", last_name="newone", dob="1968-02-04", email="someone@example.com", phone_number = "2898512618", address = "Nanded"))
+        temp_cust = self.customer.create_customer(Customer(0, first_name="name", last_name="name2", dob="2000-01-01", email="name@example.com", phone_number = "7887337481", address = "kolhapur"))
         self.assertNotEqual(temp_cust,None)
 
     def test_get_customer(self):
         with self.assertRaises(CustomerNotFoundException):
-            temp_cust = self.customer.get_customer(customer_id=200)
+            temp_cust = self.customer.get_customer(customer_id=450)
 
     def test_get_transactions(self):
         with self.assertRaises(InvalidAccountException):
